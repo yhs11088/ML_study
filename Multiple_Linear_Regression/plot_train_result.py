@@ -22,8 +22,8 @@ def plot_history(history, save = True, fname = "Train_History.png"):
     n_train_record = len(history['train_loss'])
     n_test_record = len(history['test_loss'])
 
-    train_iters = np.arange(n_train_record)
-    test_iters = np.arange(n_test_record) * n_train_record / n_test_record
+    train_iters = np.arange(1, n_train_record+1)
+    test_iters = np.arange(1, n_test_record+1) * n_train_record / n_test_record
 
     fig = plt.figure()
     plt.plot(train_iters, history['train_loss'], 'ko-', markersize = 2.5, label = 'Train')
